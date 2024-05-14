@@ -24,7 +24,16 @@
                 target: document.querySelector('#camera')    // Or '#yourElement' (optional)
             },
             decoder: {
-                readers: ["code_128_reader"]
+                readers: [{
+                    format: "ean_reader",
+                    config: {}
+                }, {
+                    format: "code_128_reader",
+                    config: {}
+                }, {
+                    format: "code_39_reader",
+                    config: {}
+                }]
             }
         }, function (err) {
             if (err) {
