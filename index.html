@@ -9,7 +9,7 @@
 </head>
 
 <body>
-
+    <div>Resultado: </div>
     <div id="resultado"></div>
     <div id="camera"></div>
 
@@ -29,9 +29,10 @@
         }, function (err) {
             if (err) {
                 console.log(err);
+
                 return
             }
-            console.log("Initialization finished. Ready to start");
+            console.log("Camera iniciada, pronta para leitura");
             Quagga.start();
         });
 
